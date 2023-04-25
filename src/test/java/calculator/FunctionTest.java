@@ -1,0 +1,24 @@
+package functions;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
+class FunctionTest {
+
+    Function func;
+    double EPS = 1e-6;
+    @BeforeEach
+    void setUp() {
+        double a = 0;
+        double b = 1;
+        int h = 1_000_000;
+        func = new Function(a, b, h, m -> Math.cos(m));
+    }
+
+    @Test
+    void calculateTest() {
+        double expected = 0.866025;
+        assertEquals(expected, func.calculate(), EPS);
+    }
+}
