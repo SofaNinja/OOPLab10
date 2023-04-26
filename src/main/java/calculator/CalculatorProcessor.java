@@ -1,4 +1,4 @@
-package functions;
+package calculator;
 
 import result.Result;
 

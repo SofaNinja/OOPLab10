@@ -1,4 +1,4 @@
-package functions;
+package calculator;
 
 import java.util.function.DoubleUnaryOperator;
 

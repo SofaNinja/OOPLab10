@@ -1,16 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 
-<?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.ooplab10.HelloController">
-  <padding>
-    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-  </padding>
 
-  <Label fx:id="welcomeText"/>
-  <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+<?import javafx.scene.Cursor?>
+<BorderPane xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ooplab10.HelloController">
+  <top>
+    <VBox>
+      <MenuBar>
+        <Menu mnemonicParsing="false" text="File">
+          <MenuItem mnemonicParsing="false" text="Close"/>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Edit">
+          <MenuItem mnemonicParsing="false" text="Delete"/>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Help">
+          <MenuItem mnemonicParsing="false" text="About"/>
+        </Menu>
+      </MenuBar>
+    </VBox>
+  </top>
+  <center>
+    <AnchorPane prefHeight="600.0" prefWidth="300.0" BorderPane.alignment="CENTER">
+      <Label fx:id="infoIntegralLabel" layoutX="208.0" layoutY="90.0" prefHeight="23.0" prefWidth="187.0"/>
+      <Label fx:id="infoTimeLabel" layoutX="237.0" layoutY="110.0" prefHeight="23.0" prefWidth="187.0"/>
+    </AnchorPane>
+  </center>
+  <bottom>
+    <VBox>
+      <ToolBar prefHeight="48.0" prefWidth="603.0">
+        <TextField fx:id="countIntervalField" prefWidth="193.0" promptText="Interval">
+          <cursor>
+            <Cursor fx:constant="TEXT"/>
+          </cursor>
+        </TextField>
+        <TextField fx:id="threadsField" prefWidth="193.0" promptText="Threads">
+          <cursor>
+            <Cursor fx:constant="TEXT"/>
+          </cursor>
+        </TextField>
+        <Button mnemonicParsing="false" onAction="#Integral" text="Integrate" prefWidth="193.0"/>
+      </ToolBar>
+    </VBox>
+  </bottom>
+</BorderPane>

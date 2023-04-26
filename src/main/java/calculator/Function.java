@@ -1,17 +1,15 @@
-package functions;
+package calculator;
 
 import java.util.function.DoubleUnaryOperator;
 import java.util.stream.IntStream;
 
 public class Function {
-    private double start;
-    private double end;
-    private int nSteps;
-    private double step;
-    private DoubleUnaryOperator f;
+    private final double start;
+    private final int nSteps;
+    private final double step;
+    private final DoubleUnaryOperator f;
     public Function(double start, double end, int nSteps, DoubleUnaryOperator f) {
         this.start = start;
-        this.end = end;
         this.nSteps = nSteps;
         this.f = f;
         step = (end - start) / nSteps;
